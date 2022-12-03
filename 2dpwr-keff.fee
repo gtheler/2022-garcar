@@ -1,0 +1,22 @@
+PROBLEM neutron_diffusion 2D GROUPS 2
+READ_MESH iaea-2dpwr.msh
+
+Bg2 = 0.8e-4  # axial geometric buckling in the z direction
+MATERIAL fuel1 D1=1.5  Sigma_a1=0.010+D1(x,y)*Bg2  Sigma_s1.2=0.02 \
+               D2=0.4  Sigma_a2=0.080+D2(x,y)*Bg2  nuSigma_f2=0.135
+
+MATERIAL fuel2 D1=1.5  Sigma_a1=0.010+D1(x,y)*Bg2  Sigma_s1.2=0.02 \
+               D2=0.4  Sigma_a2=0.085+D2(x,y)*Bg2  nuSigma_f2=0.135
+
+MATERIAL fuel2rod  D1=1.5  Sigma_a1=0.010+D1(x,y)*Bg2  Sigma_s1.2=0.02 \
+                   D2=0.4  Sigma_a2=0.130+D2(x,y)*Bg2  nuSigma_f2=0.135
+
+MATERIAL reflector D1=2.0  Sigma_a1=0.000+D1(x,y)*Bg2  Sigma_s1.2=0.04
+                   D2=0.3  Sigma_a2=0.010+D2(x,y)*Bg2
+
+BC external vacuum=0.4692  # "external" is the name of the entity in the .geo
+BC mirror   mirror         # the first mirror is the name, the second is the BC type
+
+SOLVE_PROBLEM   # solve!
+PRINT %.5f "keff = " keff
+WRITE_MESH iaea-2dpwr-$1.vtk phi1 phi2
