@@ -476,16 +476,6 @@ $
 ::::::::::::::
 
 
-## Transient emergency boron injection---cell-level neutronics
-
-
-\centering ![](gota.svg){width=70%}
-
-
-\centering ![](4x4ref.svg){width=80%}
-
-
-
 
 ## Side effect: the $S_2$ Stanford Bunny
 
