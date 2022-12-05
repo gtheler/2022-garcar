@@ -2,7 +2,7 @@
 title: A cloud-first approach for solving core-level neutron transport 
 author: Germán (Jeremy) Theler
 institute: |
- Grupo Argentino de Cálculo y Análisis de Reactores \\
+ Grupo Argentino de Cálculo y Análisis de Reactores \\\\
  Reunión Anual 2022
 email: jeremy@seamplex.com
 aspectratio: 169
