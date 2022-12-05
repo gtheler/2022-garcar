@@ -154,7 +154,7 @@ Because it is easier that way.
  * Structured grids only
  * “Finite differences”
  * NDAs, weird licensing terms, etc.
- * Lack of version control, traceability, etc.
+ * Lack of version control, traceability, unit tests, CI, etc.
     - ...yet regulatory agencies speak about QA!
  * ...
  * Add your own annoyance/nuisance to the list
